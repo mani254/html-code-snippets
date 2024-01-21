@@ -1,0 +1,158 @@
+/* 
+==========================================
+    common animation of the divs
+========================================== */
+
+.anmt-fadein {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.anmt-fadein.animated {
+	opacity: 1;
+}
+
+.anmt-fadeout.hidden{
+    opacity:0;
+}
+
+.anmt-slidein-left {
+	opacity: 0;
+	transform: translateX(-20px);
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.anmt-slidein-left.animated {
+	opacity: 1;
+	transform: translateX(0);
+}
+.anmt-slideout-left.hidden{
+    opacity:0;
+    transform: translateX(-20px);
+}
+
+
+.anmt-slidein-right {
+	opacity: 0;
+	transform: translateX(20px);
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.anmt-slidein-right.animated {
+	opacity: 1;
+	transform: translateX(0);
+}
+.anmt-slideout-right.hidden{
+    opacity:0;
+    transform: translateX(20px);
+}
+
+
+
+.anmt-scalein {
+	opacity: 0;
+	transform: scale(0.8);
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.anmt-scalein.animated {
+	opacity: 1;
+	transform: scale(1);
+}
+.anmt-scaleout.hidden{
+    opacity: 0;
+	transform: scale(0.8);
+}
+
+
+.anmt-slideup {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.anmt-slideup.animated {
+	opacity: 1;
+	transform: translateY(0);
+}
+.anmt-slidedown.hidden{
+    opacity: 0;
+	transform: translateY(20px);
+}
+
+
+.anmt-slidedown {
+	opacity: 0;
+	transform: translateY(-20px);
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.anmt-slidedown.animated {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.anmt-slideup.hidden{
+    opacity: 0;
+	transform: translateY(-20px);
+}
+
+.anmt-duration-02 {
+	transition-duration: 0.2s;
+}
+.anmt-duration-03 {
+	transition-duration: 0.3s;
+}
+.anmt-duration-04 {
+	transition-duration: 0.4s;
+}
+.anmt-duration-05 {
+	transition-duration: 0.5s;
+}
+.anmt-duration-06 {
+	transition-duration: 0.6s;
+}
+.anmt-duration-07 {
+	transition-duration: 0.7s;
+}
+.anmt-duration-08 {
+	transition-duration: 0.8s;
+}
+
+.anmt-delaty-02 {
+	transition-delay: 0.2s;
+}
+.anmt-delaty-03 {
+	transition-delay: 0.3s;
+}
+.anmt-delaty-04 {
+	transition-delay: 0.4s;
+}
+.anmt-delaty-05 {
+	transition-delay: 0.5s;
+}
+.anmt-delaty-06 {
+	transition-delay: 0.6s;
+}
+.anmt-delaty-07 {
+	transition-delay: 0.7s;
+}
+.anmt-delaty-08 {
+	transition-delay: 0.8s;
+}
+
+.anmt-ease-in {
+	transition-timing-function: ease-in;
+}
+
+.anmt-ease-out {
+	transition-timing-function: ease-out;
+}
+
+.anmt-ease-in-out {
+	transition-timing-function: ease-in-out;
+}
+
+.anmt-linear {
+	transition-timing-function: linear;
+}
