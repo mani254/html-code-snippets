@@ -74,3 +74,44 @@ ul {
 a {
 	text-decoration: none;
 }
+
+/* ===================================
+            COMMON FLEX 
+=================================== */
+
+.d-flex {
+	display: flex;
+}
+.d-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.d-h-center {
+	display: flex;
+	justify-content: center;
+}
+.d-v-center {
+	display: flex;
+	align-items: center;
+}
+.d-c-a {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.d-c-b {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.d-a-c {
+	display: flex;
+	align-items: space-around;
+	justify-content: center;
+}
+.d-b-c {
+	display: flex;
+	align-items: space-between;
+	justify-content: center;
+}
