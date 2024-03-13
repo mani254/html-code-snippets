@@ -1,0 +1,144 @@
+:root {
+	--value: 50px;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.d-view-animation {
+	width: 100vw;
+	height: 100vh;
+	background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:60px;
+    perspective: 8em;
+    perspective-origin: 50% calc(50% - 2.5em);
+}
+.scene{
+    position:relative;
+    transform-style: preserve-3d;
+    animation: rotate-scene 50s linear infinite;
+}
+.floor{
+    position:absolute;
+    width: 13em;
+    height:13em;
+    background-image: radial-gradient(#0000,#000 75%),repeating-conic-gradient(from 45deg, #111 0deg 90deg,#222 90deg 180deg);
+    background-size:100%,1em 1em;
+    top:1em;
+    transform: translate(-50%,-50%) rotateX(90deg);
+}
+.ball{
+    width: 1em;
+    height:1em;
+    background:lightblue;
+    position: absolute;
+    left:-.5em;
+    bottom:1em;
+    border-radius:50%;
+    animation: rotate-ball 50s linear infinite, bounce 3s linear infinite;
+    background:radial-gradient(at top,rgb(122, 153, 163) 5%, #000 100%)
+}
+
+.cube{
+    width:2em;
+    height:2em;
+    position:absolute;
+    top:-1em;
+    left:-1em;
+    transform-style: preserve-3d;
+}
+.right,.left,.front,.back{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:#0ff7;
+    box-shadow: 0 0 0.5em #000a inset;
+    animation:height-anm 3s linear infinite;
+    bottom:0
+    /* box-shadow: 0 0 0.5em #000a inset; */
+}
+.front {
+    transform: translateZ(1em);
+}
+.back{
+    transform: translateZ(-1em);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(1em); /* Removed quotes */
+}
+
+.left{
+    transform: rotateY(270deg) translateZ(1em);
+}
+.top{
+    background: #0ff7;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    transform:rotateX(90deg) translateZ(1em);
+    box-shadow: 0 0 0.5em #000a inset;
+    animation:top-anm 3s  linear infinite;
+}
+.top::after{
+    content:'';
+    position:absolute;
+    width:1em;
+    height: 1em;
+    left:50%;top:50%;
+    transform: translate(-50%,-50%);
+    border-radius:50%;
+    background-image:radial-gradient(at center, #0008,#0000 100%);
+}
+.bottom{
+    background: #0ff7;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    transform:rotateX(90deg) translateZ(-1em);
+    box-shadow: 0 0 1em #000a;
+}
+
+@keyframes rotate-scene {
+    to{
+        transform:rotateY(360deg);
+    }
+}
+@keyframes rotate-ball {
+    to{
+        transform:rotateY(-360deg);
+    }
+}
+@keyframes bounce {
+   0%,100%{
+    bottom:0.5em;
+    animation-timing-function: ease-out;
+   }
+   50%{
+    bottom:2em;
+    animation-timing-function: ease-in;
+   }
+}
+
+@keyframes height-anm {
+    0%,100%{
+        height:calc(100% - 0.3em);
+    }
+    50%{
+        height:100%;
+    }
+}
+@keyframes top-anm{
+    0%,100%{
+        transform:rotateX(90deg) translateZ(calc(1em - 0.3em));
+        animation-delay: 1.5s;
+    }
+    50%{
+        transform:rotateX(90deg) translateZ(1em);
+        animation-delay: 1.5s;
+    }
+}
